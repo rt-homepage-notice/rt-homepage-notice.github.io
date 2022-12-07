@@ -220,7 +220,7 @@ customElements.define(
 
 setTimeout(() => {
   let host = searchParam("host");
-  console.log("host", host);
+  console.log("setTimeout host", host);
   if (host) {
     document.body.append(
       elementFromObject({
@@ -242,7 +242,12 @@ setTimeout(() => {
       })
     );
   } else {
-    showAllNotices();
+    if (
+      location.host.includes("127.0.0.1") ||
+      location.host.includes("github.io")
+    ) {
+      showAllNotices();
+    }
   }
 }, 1000);
 
