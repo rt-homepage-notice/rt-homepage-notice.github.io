@@ -6,19 +6,20 @@ const notices = {
   <br>Zondag 25 en maandag 26 december: gesloten
   <br>Dinsdag 27 december t/m vrijdag 30 december: open van 11.00 tot 17.30 uur
   <br>Zaterdag 31 december, zondag 1 januari en maandag 2 januari: gesloten`,
-  roadsvervoer: `Gesloten op Maandag 26 december`,
-  restaurantfrued: `Kerstavond 24 december open !
+  vervoer: `Gesloten op Maandag 26 december`,
+  freud: `Kerstavond 24 december open !
   <br>Eerste Kerstdag 15 december open !
   <br>Tweede Kerstdag 26 december gesloten
   <br>Oudjaarsdag en Nieuwjaarsdag gesloten`,
   "roads-technology": `Maandag 26 december gesloten
   <br>Vrijdag 30 december gesloten`,
-  recyclefietsen: `Maandag 26 december gesloten
+  recycle: `Maandag 26 december gesloten
   <br>Zaterdag 31 december gesloten
   <br>Zondag 1 januari gesloten`,
-  roadsprintenpixels: `Tweede Kerstdag gesloten`,
-  appeltaartimperium: `Tweede Kerstdag gesloten`,
+  printenpixels: `Tweede Kerstdag gesloten`,
+  appeltaart: `Tweede Kerstdag gesloten`,
   zeefdrukmakers: ``,
+  technology: `Maandag 27 december en vrijdag 30 december gesloten`,
 };
 // ***************************************************************************
 window.searchParam = (name) =>
@@ -167,7 +168,10 @@ customElements.define(
       this.initDatePeriod();
       if (this.period.inperiod) this.addNotice();
       else this.removeNotice();
-      this.hide();
+
+      // show big or small notice based on localStorage
+      if (this.seen) this.hide();
+      else this.show();
     }
     // -----------------------------------------------------------------------
     addNotice() {
