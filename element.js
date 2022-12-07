@@ -15,7 +15,7 @@ const notices = {
   <br>Eerste Kerstdag 15 december open !
   <br>Tweede Kerstdag 26 december gesloten
   <br>Oudjaarsdag en Nieuwjaarsdag gesloten`,
-  technology: `Maandag 27 december en vrijdag 30 december gesloten`,
+  technology: `Maandag 26 december en vrijdag 30 december gesloten`,
   vervoer: `Gesloten op Maandag 26 december`,
   zeefdrukmakers: ``,
 };
