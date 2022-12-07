@@ -1,25 +1,23 @@
 // ***************************************************************************
 const localStorageName = "seenChristmas2022";
 const notices = {
+  appeltaartimperium: `Tweede Kerstdag gesloten`,
   houtstek: `Maandag 19 december: gesloten
   <br>Zaterdag 24 december: open van 11.00 tot 16.30 uur
   <br>Zondag 25 en maandag 26 december: gesloten
   <br>Dinsdag 27 december t/m vrijdag 30 december: open van 11.00 tot 17.30 uur
   <br>Zaterdag 31 december, zondag 1 januari en maandag 2 januari: gesloten`,
-  vervoer: `Gesloten op Maandag 26 december`,
-  freud: `Kerstavond 24 december open !
-  <br>Eerste Kerstdag 15 december open !
-  <br>Tweede Kerstdag 26 december gesloten
-  <br>Oudjaarsdag en Nieuwjaarsdag gesloten`,
-  "roads-technology": `Maandag 26 december gesloten
-  <br>Vrijdag 30 december gesloten`,
+  printenpixels: `Tweede Kerstdag gesloten`,
   recycle: `Maandag 26 december gesloten
   <br>Zaterdag 31 december gesloten
   <br>Zondag 1 januari gesloten`,
-  printenpixels: `Tweede Kerstdag gesloten`,
-  appeltaart: `Tweede Kerstdag gesloten`,
-  zeefdrukmakers: ``,
+  restaurantfreud: `Kerstavond 24 december open !
+  <br>Eerste Kerstdag 15 december open !
+  <br>Tweede Kerstdag 26 december gesloten
+  <br>Oudjaarsdag en Nieuwjaarsdag gesloten`,
   technology: `Maandag 27 december en vrijdag 30 december gesloten`,
+  vervoer: `Gesloten op Maandag 26 december`,
+  zeefdrukmakers: ``,
 };
 // ***************************************************************************
 window.searchParam = (name) =>
@@ -57,7 +55,7 @@ const noticeElement = (html) => {
     src: `https://svg-cdn.github.io/christmasbells.svg`,
     styles: { width: "100%" },
   });
-  const smallsize = 80;
+  const smallsize = 60;
   const smallnotice = elementFromObject({
     tag: "DIV",
     id: "smallnotice",
@@ -276,7 +274,6 @@ function showAllNotices() {
           },
           innerHTML: notice,
         }),
-        elementFromObject({ tag: "HR" }),
         elementFromObject({ tag: "HR" }),
       ],
     });
