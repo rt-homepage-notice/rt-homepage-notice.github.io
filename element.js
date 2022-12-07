@@ -81,7 +81,7 @@ const noticeElement = (html) => {
     id: "bignotice",
     styles: {
       ...redstyle,
-      opacity: 0.7,
+      //opacity: 0.7,
       //position: "absolute",
       width: "80vw",
       margin: "0 auto",
@@ -236,8 +236,10 @@ setTimeout(() => {
           width: "80vw",
           margin: "0 auto",
           marginLeft: "10vw",
-          position: "absolute",
           marginTop: "20vw",
+          position: "fixed",
+          top: 0,
+          zIndex: 999,
         },
       })
     );
