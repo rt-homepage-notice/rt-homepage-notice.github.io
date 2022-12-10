@@ -1,5 +1,9 @@
 // ***************************************************************************
 const localStorageName = "seenChristmas2022";
+const dates = {
+  from: "5-12-2022 00:00:00",
+  to: "1-1-2023",
+};
 const notices = {
   appeltaartimperium: `Tweede Kerstdag gesloten`,
   houtstek: `Maandag 19 december: gesloten
@@ -7,16 +11,16 @@ const notices = {
   <br>Zondag 25 en maandag 26 december: gesloten
   <br>Dinsdag 27 december t/m vrijdag 30 december: open van 11.00 tot 17.30 uur
   <br>Zaterdag 31 december, zondag 1 januari en maandag 2 januari: gesloten`,
-  printenpixels: `Tweede Kerstdag gesloten`,
-  recycle: `Maandag 26 december gesloten
+  roadsprintenpixels: `Tweede Kerstdag gesloten`,
+  recyclefietsen: `Maandag 26 december gesloten
   <br>Zaterdag 31 december gesloten
   <br>Zondag 1 januari gesloten`,
   restaurantfreud: `Kerstavond 24 december open !
   <br>Eerste Kerstdag 15 december open !
   <br>Tweede Kerstdag 26 december gesloten
   <br>Oudjaarsdag en Nieuwjaarsdag gesloten`,
-  technology: `Maandag 26 december en vrijdag 30 december gesloten`,
-  vervoer: `Gesloten op Maandag 26 december`,
+  "roads-technology": `Maandag 26 december en vrijdag 30 december gesloten`,
+  roadsvervoer: `Gesloten op Maandag 26 december`,
   zeefdrukmakers: ``,
 };
 // ***************************************************************************
@@ -269,8 +273,7 @@ function showAllNotices() {
         elementFromObject({
           tag: "rt-homepage-notice",
           attrs: {
-            from: "5-12-2022 00:00:00",
-            to: "1-1-2023",
+            ...dates,
           },
           innerHTML: notice,
         }),
