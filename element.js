@@ -184,7 +184,8 @@ customElements.define(
         this.shadowRoot.append(...noticeElement(notice));
       } else {
         console.log("prepend innerHTML:", host);
-        this.shadowRoot.append(...noticeElement(this.innerHTML));
+        //! No notice, append nothing!
+        //this.shadowRoot.append(...noticeElement(this.innerHTML));
       }
     }
     // -----------------------------------------------------------------------
